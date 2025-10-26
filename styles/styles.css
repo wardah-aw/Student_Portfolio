@@ -16,13 +16,14 @@ body{
   background:#f6f7fb;
 }
 
-.container{
+.index-container{
   width:min(1180px,92%);
   margin-inline:auto;
 }
 
+/* <<< For My Team: This is css for nav bar    >>>>  */
 /* NAV */
-.topbar{
+.index-topbar{
   position:sticky;
   top:0;
   z-index:50;
@@ -30,22 +31,24 @@ body{
   backdrop-filter:saturate(140%) blur(6px);
   border-bottom:1px solid rgba(255,255,255,.08);
 }
-.navwrap{
+.index-navwrap{
   display:flex;
-  align-items:center;
+  align-items:left;
   justify-content:space-between;
-  padding:14px 0;
+  padding:15px 0;
 }
-.brand{
+.index-brand{
   display:flex;
-  align-items:center;
+  align-items:left;
   gap:10px;
   color:var(--white);
   text-decoration:none;
-  font-weight:600;
-  letter-spacing:.2px;
+  font-weight:800;
+  font-size: 27px;
+  letter-spacing:.5px;
+  margin-left:-250px;
 }
-.brand-badge{
+.index-brand-badge{
   display:grid;
   place-items:center;
   width:34px;height:34px;
@@ -53,24 +56,35 @@ body{
   background:#0ef;
   color:#002;
   font-weight:800;
+  font-size: 25px;
 }
-.nav{
+.index-nav{
   display:flex;
-  gap:26px;
+  margin-right: -100px;
+  gap:28px;
 }
-.navlink{
+.index-navlink{
   color:var(--white);
   text-decoration:none;
   font-weight:500;
   opacity:.9;
+  font-size: 20px;
   padding:.4rem .2rem;
   border-bottom:2px solid transparent;
   transition:opacity .2s,border-color .2s;
 }
-.navlink:hover{opacity:1;border-color:#0ef}
+.index-navlink:hover{opacity:1;border-color:#0ef}
+/* <<< For My Team: Nav css ends here.  >>>    */
+
+
+/* <<<  For My Team: Responsive navbar adjustments for mobile */
+@media (max-width: 620px){
+  .nav{gap:16px}
+  .navlink{font-size:.95rem}
+}
 
 /* HERO */
-.hero{
+.index-hero{
   position:relative;
   background:
     radial-gradient(1200px 520px at 78% 0%, rgba(255,255,255,.08), transparent 60%),
@@ -78,57 +92,60 @@ body{
   padding:72px 0 140px;
   overflow:hidden;
 }
-.hero-grid{
+.index-hero-grid{
   display:grid;
   grid-template-columns: 1.1fr .9fr;
   gap:48px;
   align-items:center;
 }
 
-.pill{
+.index-pill{
   align-self:flex-start;
   display:inline-block;
   background:rgba(255,255,255,.12);
   border:1px solid rgba(255,255,255,.18);
-  padding:8px 14px;
+  padding:8px 18px;
   border-radius:999px;
-  font-size:.85rem;
+  font-size:18px;
   letter-spacing:.2px;
+  font-weight:700;
   margin-bottom:18px;
 }
-.hero-title{
+.index-hero-title{
   font-size:clamp(2.1rem,3.8vw,3.4rem);
   line-height:1.1;
   font-weight:800;
   max-width:18ch;
   margin:0 0 14px;
 }
-.hero-sub{
+.index-hero-sub{
   color:var(--muted);
   font-weight:500;
   max-width:48ch;
   margin:0 0 22px;
+  font-size: 20px;
 }
 
-/* trust badges */
-.trust{display:flex;gap:18px}
-.trust-item{
+.index-trust{display:flex;gap:18px;}
+.index-trust-item{
   display:flex;align-items:center;gap:10px;
-  background:rgba(255,255,255,.10);
-  border:1px solid rgba(255,255,255,.15);
-  padding:10px 14px;border-radius:12px
+  background:white;
+  border:2px solid rgba(17, 17, 17, 0.15);
+  padding:10px 14px;border-radius:12px;
+  font-size: 20px;
+  color:black;
+  gap: 10px;
 }
-.trust-item img{height:20px;filter:brightness(100%)}
-.trust-item span{font-weight:600}
+.index-trust-item img{height:25px;filter:brightness(100%)}
+.index-trust-item span{font-weight:600}
 
-/* visual side */
-.hero-visual{
+.index-hero-visual{
   position:relative;
   height:420px;
   display:grid;
   place-items:center;
 }
-.sticker{
+.index-sticker{
   position:relative;
   width:min(420px,88%);
   aspect-ratio:1/1.05;
@@ -139,162 +156,152 @@ body{
   overflow:hidden;
   transform:rotate(-2deg);
 }
-.sticker img{
+.index-sticker img{
   width:100%;height:100%;object-fit:cover;
   transform:scale(1.02);
 }
 
-/* yellow bubble like the reference */
-.bubble{
-  position:absolute;
-  top:18px;right:10%;
-  background:var(--acc);
-  color:#222;
-  font-weight:700;
-  padding:10px 14px;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-}
-.bubble:after{
-  content:"";
-  position:absolute;bottom:-8px;right:16px;
-  width:14px;height:14px;background:var(--acc);
-  transform:rotate(45deg);
-  border-radius:3px;
-}
-
-/* accent dots */
-.dots{
-  position:absolute;left:4%;bottom:10%;
-  width:120px;height:80px;
-  background:
-    radial-gradient(circle at 6px 6px, rgba(255,255,255,.25) 3px, transparent 4px) 0 0/20px 20px;
-  opacity:.8;
-}
-
-/* layered wave footer */
-.wave-wrap{
+.index-wave-wrap{
   position:absolute;
   left:0;right:0;bottom:-1px;
   height:180px;
 }
-.wave{
+.index-wave{
   position:absolute;left:0;bottom:0;width:100%;height:100%;
   display:block;
 }
-.wave path{fill:#f6f7fb}
-.wave.back{opacity:.35;transform:translateY(18px)}
-.wave.front{opacity:1}
+.index-wave path{fill:#f6f7fb}
+.index-wave.back{opacity:.35;transform:translateY(18px)}
+.index-wave.front{opacity:1}
 
-/* ABOUT */
-.about{
+.index-about{
   background:#f6f7fb;
   color:var(--ink);
   padding:70px 0 90px;
+  height:60%
 }
-.about-wrap{
+.index-about-wrap{
   text-align:center;
   max-width:860px;
 }
-.about h2{
+.index-about h2{
   margin:0 0 12px;
-  font-size:clamp(1.6rem,2.4vw,2.2rem);
+  font-size:38px;
   color:#16053d;
 }
-.about p{
+.index-about p{
   margin:0 auto;
-  font-size:1.05rem;
+  font-size:20px;
   line-height:1.7;
   color:#3a3a48;
 }
+.index-cta-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 28px;
+  background: #0ef; /* accent color */
+  color: #002;       /* text color */
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.index-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
 
 /* responsive */
 @media (max-width: 980px){
-  .hero-grid{grid-template-columns:1fr;gap:30px}
-  .hero-visual{height:380px}
-  .sticker{transform:none;margin-top:6px}
+  .index-hero-grid{grid-template-columns:1fr;gap:30px}
+  .index-hero-visual{height:380px}
+  .index-sticker{transform:none;margin-top:6px}
 }
 @media (max-width: 620px){
-  .nav{gap:16px}
-  .navlink{font-size:.95rem}
-  .trust{flex-wrap:wrap}
-  .bubble{right:6%}
+  .index-nav{gap:16px}
+  .index-navlink{font-size:.95rem}
+  .index-trust{flex-wrap:wrap}
+  .index-bubble{right:6%}
 }
+
+/* <<< For My Team: This is css for footer    >>>>  */
 /* FOOTER */
-.footer{
+.index-footer{
   background:#13053a;
   color:#fff;
   padding:60px 0 30px;
   border-top:2px solid rgba(255,255,255,.06);
   font-family:Poppins, sans-serif;
 }
-.foot-wrap{
+.index-foot-wrap{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:50px;
   align-items:flex-start;
 }
-.foot-brand h3{
-  font-size:1.6rem;
-  font-weight:700;
+.index-foot-brand h3{
+  font-size:27px;
+  font-weight:800;
   margin-bottom:10px;
 }
-.foot-brand span{
-  color:#00d1ff;
-}
-.foot-brand p{
-  font-size:.95rem;
+.index-foot-brand p{
+  font-size:18px;
   line-height:1.6;
   color:#ccc;
 }
-.foot-links h4,
-.foot-social h4{
-  font-size:1.1rem;
+.index-foot-links h4,
+.index-foot-social h4{
+  font-size:20px;
   margin-bottom:12px;
   color:#00d1ff;
 }
-.foot-links ul,
-.foot-social ul{
+.index-foot-links ul,
+.index-foot-social ul{
   list-style:none;
   padding:0;
   margin:0;
 }
-.foot-links li,
-.foot-social li{
+.index-foot-links li,
+.index-foot-social li{
   margin-bottom:8px;
 }
-.foot-links a,
-.foot-social a{
+.index-foot-links a,
+.index-foot-social a{
   color:#fff;
   text-decoration:none;
-  font-size:.95rem;
+  font-size:16px;
   opacity:.85;
   display:inline-flex;
   align-items:center;
   gap:8px;
   transition:opacity .2s,color .2s;
 }
-.foot-links a:hover,
-.foot-social a:hover{
+.index-foot-links a:hover,
+.index-foot-social a:hover{
   opacity:1;
   color:#00d1ff;
 }
-.foot-social img{
+.index-foot-social img{
   width:18px;height:18px;
   filter:brightness(100%);
 }
-.foot-copy{
+.index-foot-copy{
   text-align:center;
   padding-top:30px;
   border-top:1px solid rgba(255,255,255,.1);
   margin-top:50px;
 }
-.foot-copy p{
-  font-size:.85rem;
+.index-foot-copy p{
+  font-size:16px;
   color:#aaa;
 }
+/* <<<  For My Team:  Footer css ends here.  >>>    */
 
-/* responsive tweak */
+
+/* <<<< For My Team: Responsive footer adjustments for mobile */
 @media(max-width:620px){
   .foot-wrap{gap:30px;text-align:center;}
   .foot-social ul,.foot-links ul{justify-content:center;}
