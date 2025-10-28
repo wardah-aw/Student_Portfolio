@@ -1,4 +1,3 @@
-
 /* =============================
    Base Styling
 ============================= */
@@ -30,7 +29,7 @@ body {
 }
 
 /* =============================
-   NAVBAR (unchanged)
+   NAVBAR
 ============================= */
 .index-topbar {
   position: sticky;
@@ -59,12 +58,13 @@ body {
 .index-brand-badge {
   display: grid;
   place-items: center;
-  width: 34px; height: 34px;
+  width: 40px; 
+  height: 40px;
   border-radius: 10px;
   background: #0ef;
   color: #002;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 20px;
 }
 .index-nav {
   display: flex;
@@ -87,7 +87,7 @@ body {
 }
 
 /* =============================
-   SERVICES SECTION (new)
+   SERVICES SECTION
 ============================= */
 .services-container {
   max-width: 1100px;
@@ -124,7 +124,7 @@ body {
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--card);
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 2rem;
@@ -155,7 +155,7 @@ body {
 }
 
 /* =============================
-   FOOTER (unchanged)
+   FOOTER
 ============================= */
 .index-footer {
   background: #13053a;
