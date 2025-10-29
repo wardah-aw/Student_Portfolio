@@ -1251,14 +1251,6 @@ tr.soft .progress {
   }
 }
 
-
-  
-
-
-
-  
-=======
-=======
 .foot-copy p{
   font-size:.85rem;
   color:#aaa;
@@ -1269,5 +1261,4 @@ tr.soft .progress {
   .foot-wrap{gap:30px;text-align:center;}
   .foot-social ul,.foot-links ul{justify-content:center;}
 }
->>>>>>> 89c83cfa408b5d686a401314308832f030ee9377
->>>>>>> release/v1.0
+
